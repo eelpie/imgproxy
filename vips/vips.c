@@ -540,7 +540,7 @@ vips_icc_export_srgb(VipsImage *in, VipsImage **out)
 int
 vips_icc_transform_srgb(VipsImage *in, VipsImage **out)
 {
-  return vips_icc_transform(in, out, "sRGB", "embedded", TRUE, "pcs", vips_icc_get_pcs(in), NULL);
+  return vips_icc_transform(in, out, "sRGB", "embedded", TRUE, "intent", 0, "pcs", vips_icc_get_pcs(in), NULL);
 }
 
 int
