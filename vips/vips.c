@@ -499,7 +499,7 @@ vips_icc_import_go(VipsImage *in, VipsImage **out)
     has_alpha_16 = TRUE;
   }
 
-  if (vips_icc_import(in, out, "embedded", TRUE, "pcs", vips_icc_get_pcs(in), NULL)) {
+  if (vips_icc_import(in, out, "embedded", TRUE, "intent", 0, "pcs", vips_icc_get_pcs(in), NULL)) {
     VIPS_UNREF(base);
     return 1;
   }
